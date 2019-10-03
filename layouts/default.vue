@@ -1,56 +1,90 @@
 <template>
   <div>
-
-    <nuxt />
+    <header>
+      <div class="container">
+        <div class="navbar">
+          <nuxt-link to="/" class="logo">Rashmi Manandhar</nuxt-link>
+          <nav>
+            <ul>
+              <li>
+                <nuxt-link to="/who">Who?</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/posts">Posts</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/contact">Contact</nuxt-link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <nuxt/>
   </div>
 </template>
 
-<style>
-html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
+<style lang="scss">
+  @import url("https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap");
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-}
+  html {
+    font-family: 'Nunito', Arial, sans-serif;
+    font-size: 16px;
+    word-spacing: 1px;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+  }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+    margin: 0;
+  }
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
+  .container {
+    margin: 0 auto;
+    width: 90%;
+  }
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
+  header {
+    background: $primary-color;
+    padding: 1em 0; //top&bottom left&right
+    text-align: center;
 
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
-}
+    .navbar{
+      display: flex;
+      justify-content: space-between;
+      font-weight: bold;
+    }
+
+    a{
+      color: white;
+      text-decoration: none;
+    }
+
+    nav{
+      display: flex;
+      ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+
+        li a{
+          font-weight: normal;
+          padding: .5em;
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    body{
+      font-size: 18px;
+    }
+
+  }
 </style>
